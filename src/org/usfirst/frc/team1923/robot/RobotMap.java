@@ -22,12 +22,12 @@ public class RobotMap {
 	public static final double DISTANCE_PER_PULSE = 1 / 256.0;
 
 	// Drive Motors
-	public static CANTalon leftDriveOne = new CANTalon(4);
-	public static CANTalon leftDriveTwo = new CANTalon(5);
-	public static CANTalon leftDriveThree = new CANTalon(6);
-	public static CANTalon rightDriveOne = new CANTalon(7);
-	public static CANTalon rightDriveTwo = new CANTalon(8);
-	public static CANTalon rightDriveThree = new CANTalon(9);
+	public static CANTalon leftDriveOne = new CANTalon(3);
+	public static CANTalon leftDriveTwo = new CANTalon(4);
+	public static CANTalon rightDriveOne = new CANTalon(1);
+	public static CANTalon rightDriveTwo = new CANTalon(2);
+	
+	public static RobotDrive drive = new RobotDrive(leftDriveOne, leftDriveTwo, rightDriveOne, rightDriveTwo);
 
 	// Intake Motor
 	public static CANTalon intake = new CANTalon(2);

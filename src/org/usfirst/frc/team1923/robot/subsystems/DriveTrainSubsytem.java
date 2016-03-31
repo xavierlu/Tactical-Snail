@@ -24,13 +24,7 @@ public class DriveTrainSubsytem extends Subsystem{
 	
 	public void rawDrive(double left, double right){
 		
-		RobotMap.leftDriveOne.set(left);
-		RobotMap.leftDriveTwo.set(left);
-		RobotMap.leftDriveThree.set(left);
-
-		RobotMap.rightDriveOne.set(right);
-		RobotMap.rightDriveTwo.set(right);
-		RobotMap.rightDriveThree.set(right);
+		RobotMap.drive.tankDrive(-left, right);
 	}
 
 	public void scalarDrive(double left, double right){
@@ -50,14 +44,5 @@ public class DriveTrainSubsytem extends Subsystem{
 		
 		rawDrive(left, right);
 	}
-	
-	//returns true if any of the motors are moving
-	public boolean isDriving(){
-		return (RobotMap.leftDriveOne.get() != 0 ||
-				RobotMap.leftDriveTwo.get() != 0 ||
-				RobotMap.leftDriveThree.get() != 0 ||
-				RobotMap.rightDriveOne.get() != 0 ||
-				RobotMap.rightDriveTwo.get() != 0 ||
-				RobotMap.rightDriveThree.get() != 0);
-	}
+
 }

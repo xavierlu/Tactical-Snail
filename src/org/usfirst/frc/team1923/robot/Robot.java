@@ -55,6 +55,7 @@ public class Robot extends IterativeRobot {
 		chooser = new SendableChooser();
 		chooser.addDefault("Do nothing", new AutonNothing());
 		chooser.addObject("low bar no shot", new DefenseAuton());
+		chooser.addObject("low bar low goal", new LowBarLowGoalAuton());
 		SmartDashboard.putData("Auto Mode", chooser);
     }
     
@@ -81,10 +82,8 @@ public class Robot extends IterativeRobot {
 		Robot.gearSubsystem.shiftDown();
 		RobotMap.leftDriveOne.enableBrakeMode(true);
 		RobotMap.leftDriveTwo.enableBrakeMode(true);
-		RobotMap.leftDriveThree.enableBrakeMode(true);
 		RobotMap.rightDriveOne.enableBrakeMode(true);
 		RobotMap.rightDriveTwo.enableBrakeMode(true);
-		RobotMap.rightDriveThree.enableBrakeMode(true);
 		
     }
 	
